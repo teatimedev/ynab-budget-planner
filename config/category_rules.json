@@ -1,0 +1,164 @@
+{
+  "rules": [
+    {
+      "id": "bill_mortgage",
+      "pattern": "leeds building society",
+      "category": "Housing - Mortgage",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.98
+    },
+    {
+      "id": "bill_coownership",
+      "pattern": "co-ownership",
+      "category": "Housing - Co-Ownership",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.98
+    },
+    {
+      "id": "bill_childcare",
+      "pattern": "tax free childcare|parentpay|nanny|kirstie toman",
+      "category": "Childcare & School",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.95
+    },
+    {
+      "id": "bill_insurance",
+      "pattern": "1st central insurance|animal friends insurance|aviva|churchill insurance|domestic & general",
+      "category": "Insurance",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.95
+    },
+    {
+      "id": "bill_vehicle_tax",
+      "pattern": "driver & vehicle licensing agency",
+      "category": "Vehicle Tax (DVLA)",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.95
+    },
+    {
+      "id": "bill_rates",
+      "pattern": "lps rates payment",
+      "category": "Home Rates/Property Tax",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.95
+    },
+    {
+      "id": "bill_utilities",
+      "pattern": "share energy trading|share energy tradi|sky mobile|vodafone",
+      "category": "Utilities & Mobile",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "bill_credit",
+      "pattern": "tesco bank|capital one|creation|american express|barclays partner finance|klarna|clearpay|very|payitmonthly",
+      "category": "Debt Repayments / Finance Plans",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.92
+    },
+    {
+      "id": "bill_subscriptions",
+      "pattern": "checkmyfile|tails.com|netflix|spotify|disney\\+|amazon prime video|amazon prime|uber one membership|thebraveway|gleanapp|oura ring|real-debrid",
+      "category": "Subscriptions",
+      "group": "required_bill",
+      "is_bill": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "var_spar",
+      "pattern": "spar loughgall road|eurospar|the chalet spar",
+      "category": "Spar (mixed petrol + food/snacks)",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.95
+    },
+    {
+      "id": "var_vending",
+      "pattern": "vend ni sales|coca-cola",
+      "category": "Work Vending Machines",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.95
+    },
+    {
+      "id": "var_coffee",
+      "pattern": "coffee|starbucks|caff|tim hortons|bobandberts|nero",
+      "category": "Coffee",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.9
+    },
+    {
+      "id": "var_vaping",
+      "pattern": "eurovape",
+      "category": "Vaping",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.95
+    },
+    {
+      "id": "var_takeaway",
+      "pattern": "just eat|mcdonald|domino|burger king|greggs|spice house|cam hing|kebab|wing it|nando",
+      "category": "Takeaways / Fast Food",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.9
+    },
+    {
+      "id": "var_grocery",
+      "pattern": "tesco|asda$|lidl|m&s|sainsbury|dunnes|supervalu|centra",
+      "category": "Groceries (non-Spar)",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.88
+    },
+    {
+      "id": "var_transport",
+      "pattern": "translink|fonacab|belfast p&d|petrol|applegreen|go petrol|asda petrol",
+      "category": "Transport",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.85
+    },
+    {
+      "id": "var_shopping",
+      "pattern": "amazon$|argos|b&m|asos|primark|nike|h&m|pull&bear|next|tiktok shop|office|waterstones|boots|home bargains",
+      "category": "Shopping (general)",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.85
+    },
+    {
+      "id": "var_digital",
+      "pattern": "openai|claude|anthropic|google|apple|canva",
+      "category": "Apps / Digital Services",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.82
+    },
+    {
+      "id": "var_investing",
+      "pattern": "trading 212|robinhood|coinbase|seccl",
+      "category": "Investing / Brokerage",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.9
+    },
+    {
+      "id": "var_cash",
+      "pattern": "atm",
+      "category": "Cash Withdrawals",
+      "group": "variable",
+      "is_bill": false,
+      "confidence": 0.95
+    }
+  ]
+}

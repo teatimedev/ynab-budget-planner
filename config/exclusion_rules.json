@@ -1,0 +1,13 @@
+{
+  "internal_transfer_types": ["Pot transfer"],
+  "internal_transfer_name_patterns": [
+    "holiday pot",
+    "bills pot",
+    "christmas pot",
+    "safety net pot",
+    "lana dorrian & jordan rippon",
+    "jordan rippon",
+    "lana dorrian"
+  ],
+  "exclude_zero_amount": true
+}

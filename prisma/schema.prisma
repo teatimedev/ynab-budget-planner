@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Import {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  sourceFiles String   // JSON array of file paths
+  rowCount    Int
+  spendRows   Int
+  latestMonth String   // "2026-01"
+}
+
+model Transaction {
+  id                   String  @id // Monzo tx_id
+  date                 DateTime
+  monthKey             String
+  day                  Int
+  name                 String
+  payeeNormalized      String
+  type                 String
+  amount               Float
+  amountAbs            Float
+  direction            String
+  monzoCategory        String
+  notes                String?
+  accountLabel         String
+  sourceFile           String
+  categoryFinal        String
+  categoryGroup        String
+  isSpend              Boolean
+  isInternalTransfer   Boolean
+  isBillCandidate      Boolean
+  billStatus           String?
+  confidenceScore      Float
+  confidenceReason     String
+  ruleIdApplied        String?
+  requiredAmountExact  Float?
+  typicalDay           Int?
+}
+
+model PayeeOverride {
+  payeeNormalized String   @id
+  categoryFinal   String
+  updatedAt       DateTime @default(now())
+}
+
+model BillOverride {
+  payeeNormalized String   @id
+  status          String   // "confirmed" | "rejected" | "edited"
+  customDay       Int?
+  customAmount    Float?
+  customCategory  String?
+  updatedAt       DateTime @default(now())
+}
+
+model Settings {
+  id               Int    @id @default(1)
+  incomeAssumption Float  @default(4300)
+  csvPaths         String @default("")
+}
